@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import ClothingCard from './components/ClothingCard';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         </p>
 
         <button>Add Clothing Item</button>
+
+        <ClothingCard />
+        
       </main>
     </>
   );

@@ -67,3 +67,7 @@ button {
 .form-container button {
   padding: 10px 20px;
 }
+.form-container select {
+  padding: 10px;
+  font-size: 16px;
+}

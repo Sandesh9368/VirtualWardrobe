@@ -8,6 +8,7 @@ function ClothingCard({ name, category, season, image }) {
       <p>Category: {category}</p>
 
       <p>Season: {season}</p>
+      
     </div>
   );
 }

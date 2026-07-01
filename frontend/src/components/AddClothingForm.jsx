@@ -5,6 +5,8 @@ function AddClothingForm({
   setCategory,
   season,
   setSeason,
+  image,
+  setImage,
   addClothingItem,
 }) {
   return (
@@ -15,7 +17,12 @@ function AddClothingForm({
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-
+      <input
+        type="text"
+        placeholder="Image URL"
+        value={image}
+        onChange={(e) => setImage(e.target.value)}
+      />
       <select
         value={category}
         onChange={(e) => setCategory(e.target.value)}

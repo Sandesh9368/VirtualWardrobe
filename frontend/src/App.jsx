@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import ClothingCard from "./components/ClothingCard";
+import AddClothingForm from "./components/AddClothingForm";
 
 function App() {
   const [wardrobe, setWardrobe] = useState([
@@ -24,23 +25,25 @@ function App() {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [season, setSeason] = useState("");
+  const [image, setImage] = useState("");
 
   const addClothingItem = () => {
-    if (!name || !category || !season) return;
+    if (!name || !category || !season || !image) return;
 
     const newItem = {
       id: Date.now(),
       name,
       category,
       season,
-      image: `https://placehold.co/250x300?text=${name.replace(" ", "+")}`,
+      image: image,
     };
-
+    
     setWardrobe([...wardrobe, newItem]);
 
     setName("");
     setCategory("");
     setSeason("");
+    setImage("");
   };
 
   return (
@@ -57,6 +60,8 @@ function App() {
           setCategory={setCategory}
           season={season}
           setSeason={setSeason}
+          image={image}
+          setImage={setImage}
           addClothingItem={addClothingItem}
         />
 

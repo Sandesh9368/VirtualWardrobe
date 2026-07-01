@@ -1,16 +1,13 @@
-function ClothingCard() {
+function ClothingCard({ name, category, season, image }) {
   return (
     <div className="card">
-      <img
-        src="https://placehold.co/250x300"
-        alt="Clothing Item"
-      />
+      <img src={image} alt={name} />
 
-      <h3>Blue Shirt</h3>
+      <h3>{name}</h3>
 
-      <p>Category: Shirt</p>
+      <p>Category: {category}</p>
 
-      <p>Season: Summer</p>
+      <p>Season: {season}</p>
     </div>
   );
 }
